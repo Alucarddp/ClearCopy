@@ -1,0 +1,8 @@
+PASS copy and SHA-256 verification
+PASS read-only comparison
+PASS long-path read/copy/verify on selected filesystem
+PASS locked file reported as unreadable, not missing or matched
+PASS write failure preserves existing destination (simulated)
+5/5 checks passed.
+This tests only a unique disposable subfolder. The locked-file and long-path checks use the selected filesystem. Disk-full/write failure is simulated; no network disconnect is forced. A real disconnect/reconnect test and production metadata/permission checks are still required separately.
+Disposable test folder cleaned up.

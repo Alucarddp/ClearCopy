@@ -1,0 +1,17 @@
+ClearCopy 0.3.9.1 (release) build - 2026-10-21
+Built by Claude in a Linux build container (this PC has no C# 14 compiler).
+Compiler: Microsoft Roslyn csc 5.0.0-2.26504.104 (Ubuntu dotnet-sdk-10.0 package), C# 14.
+References: .NET Framework 4.8 + WPF assemblies copied read-only from this PC's C:\Windows\Microsoft.NET\Framework64\v4.0.30319.
+Options: /target:winexe /platform:x64 /unsafe+ /optimize+ /deterministic+ /langversion:14.0, same icon, manifest and resource as Source\Build.ps1.
+Result: 0 errors, 14 warnings (the same inherited CS0649 warnings as 0.3.6).
+Output: ..\ClearCopy-0.3.9.1.exe         SHA-256 5E64FFDFD27159CBD054F3E20C0AA4D75FC26B61E52876A88BE259DCC6D4B843
+        ..\ClearCopy-0.3.9.1.exe.config  (long-path switches; keep beside the exe with the matching name)
+Test programs, compiled against that exe with the same compiler (Tests\prebuilt):
+        Phase1Regression.exe  D5F2A79BC8E31CCAF7C2F806B45ECBFB91FC63594A7DAD6C72CFE992FF2CE561
+        TransferCheck.exe     B9943DAB4A4DF0B0B103E4F2B85D52153D3972C0B2FCD9C38D0087C1D9A3D0B9
+        SafetyCheck.exe       9A4198AEF272FE28303E1EC59C3F96CC6696DE9E8956FE9A23C56B92B6EEF4F4
+        CheckpointCheck.exe   C8DA939655B88CBE106FE4C89FD752005EAC061EC7C68A4CB31C2DBFBFD23D68
+Code history: 0.3.9 passed all tests at 12:34 (51/51); 0.3.9.1 changes only the idle percentage text and the version.
+Test run for this 0.3.9.1 exe: ALL TESTS PASSED on ZANDRE-LT, 2026-10-21 12:38 (51/51 regression checks + TransferCheck, SafetyCheck, CheckpointCheck). See test-log.txt.
+Not yet tested: real SMB/NAS runs at full scale.
+To rebuild on Windows you need Microsoft.Net.Compilers.Toolset 5.0.0+ and Source\Build.ps1 -CompilerPath <csc.exe>.

@@ -1,0 +1,102 @@
+﻿ClearCopy 0.3.9.1 test run 2026-10-21 12:38:58 on ZANDRE-LT
+Testing: C:\Users\zandrec\OneDrive - SoReal Solutions\Documents\Clearcopy\ClearCopy-0.3.9.1.exe  SHA-256 5E64FFDFD27159CBD054F3E20C0AA4D75FC26B61E52876A88BE259DCC6D4B843
+Test folder: C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858
+---- Phase1Regression
+PASS Fast Copy new file, timestamp and explicit not-verified state
+PASS Fast Copy equal-size/time collision and checkpoint do not hash
+PASS Verified Copy identical files are hashed and matched
+PASS Verified Copy detects same-size/time different content
+PASS Configurable timestamp tolerance is policy only
+PASS All write modes and overwrite rules protect newer destinations
+PASS Explicit newer-file authorization retains recovery backup
+PASS Authorization is per conflict, not a blanket job permission
+PASS Destination changes during confirmation invalidate approval
+PASS Destination changes at commit preserve concurrent writer
+PASS Overwrite hashes detect same-size/time concurrent content changes
+PASS Compare is read-only, detects missing/mismatch and keeps extras
+PASS Directory creation optimization still rejects file/directory collisions
+PASS Successful checkpoint revalidation performs one source/target pair
+PASS Checkpoint mismatch is never trusted
+PASS Revalidated checkpoint never rewrites newer destination timestamps
+PASS Repair copies missing file and SHA-256 verifies it
+PASS Repair recopies content mismatch even with equal size/time
+PASS Repair rechecks stale mismatch that now matches without writing
+PASS Repair protects newer destination until individually confirmed
+PASS Metadata-only differences are separate and never content repair candidates
+PASS Changed/inaccessible/metadata issues are excluded; later state wins
+PASS Metadata difference does not hide a simultaneous content mismatch
+PASS Locked destination produces unresolved failure without overwrite
+PASS Injected access denial is visible and excluded from repair
+PASS Cancellation removes partial, records not reached, then resumes safely
+PASS Source modification before copying blocks stale plan
+PASS Source modification after hashing is caught by final audit
+PASS Existing metadata/DACL preservation remains supported
+PASS 0.3.7 DACL compare ignores only the auto-inherited flags
+INFO cleared-Archive probe: attributes equal=False, metadata differences=1; same limitation reproduced in original 0.3.5.4
+PASS Inherited Archive-bit edge case is visible in independent Compare
+PASS Restrictive directory DACL is applied after child content copying
+PASS 0.3.5.4 XML jobs map to explicit modes and retain checkpoints
+PASS Real 0.3.5.4 serializer fixture loads in 0.3.9.1
+PASS CSV retains legacy columns and adds explicit verification states
+PASS Log batching, explicit boundary flush, timer and failures
+PASS Scratch array reused across copy and hash operations
+PASS UI exposes three modes and old job mode restoration
+PASS UI Fast Copy completion is explicitly not verified
+PASS UI Repair All protects newer files and retains unresolved rows
+PASS UI selected repair always verifies and retains original whole scope
+INFO path attribute reads per file: copy=49.7 skip=7.7 (path depth 19)
+PASS 0.3.7 path cache: skipped files on a deep tree need far fewer attribute reads
+PASS 0.3.7 path cache: junction at a deep destination ancestor is still blocked
+PASS 0.3.7 path cache: parent folder swapped for a junction mid-run is caught
+PASS 0.3.7 path cache: grandparent swapped for a junction mid-run is caught before writing
+PASS 0.3.7 path cache: cache is cleared between runs
+PASS 0.3.7 paste countdown starts the job when left alone
+PASS 0.3.7 paste countdown: any click stops it and nothing starts
+PASS 0.3.9 slim header: version in title bar, theme is a lightbulb icon
+PASS 0.3.9 count links open Results filtered to that status
+PASS 0.3.9 compact view hides the details area and restores it
+RESULT passed=51 failed=0
+HARNESS Phase1Regression EXIT 0
+---- TransferCheck
+Source path length: 255
+Stamp.Exists: True
+FOLDER CREATED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target
+FOLDER CREATED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+FOLDER CREATED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+COPIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt : Primary stream copied; last-write time preserved
+MATCHED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt : SHA-256 primary streams matched while both files were held read-only
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt | details=True | DACL=True | owner/audit rules/alternate streams not handled
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb | details=True | DACL=True | owner/audit rules/alternate streams not handled
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | details=True | DACL=True | owner/audit rules/alternate streams not handled
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target | details=True | DACL=True | owner/audit rules/alternate streams not handled
+RESULT copied=1, skipped=0, errors=0, matched=1, missing=0, mismatched=0, changed=0, unchecked=0, metadata differences=0
+Copied=1 Matched=1 Errors=0
+SKIPPED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt : Policy skip; size/time is not content verification
+MATCHED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt : SHA-256 primary streams matched while both files were held read-only
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt | details=True | DACL=True | owner/audit rules/alternate streams not handled
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb | details=True | DACL=True | owner/audit rules/alternate streams not handled
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | details=True | DACL=True | owner/audit rules/alternate streams not handled
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target | details=True | DACL=True | owner/audit rules/alternate streams not handled
+RESULT copied=0, skipped=1, errors=0, matched=1, missing=0, mismatched=0, changed=0, unchecked=0, metadata differences=0
+Resume: Skipped=1 Matched=1 Errors=0
+COPIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt : Primary stream copied; last-write time preserved | previous version: C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\.clearcopy-replaced-eb1158407ca445289bbc7946d9dca5a9.bak
+MATCHED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt : SHA-256 primary streams matched while both files were held read-only | previous version: C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\.clearcopy-replaced-eb1158407ca445289bbc7946d9dca5a9.bak
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt | details=True | DACL=True | owner/audit rules/alternate streams not handled
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb | details=True | DACL=True | owner/audit rules/alternate streams not handled
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | details=True | DACL=True | owner/audit rules/alternate streams not handled
+METADATA APPLIED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target | details=True | DACL=True | owner/audit rules/alternate streams not handled
+RESULT copied=1, skipped=0, errors=0, matched=1, missing=0, mismatched=0, changed=0, unchecked=0, metadata differences=0
+Replacement: Copied=1 Matched=1 Errors=0
+MATCHED C:\Users\zandrec\AppData\Local\Temp\ClearCopy-0.3.9.1-tests-20261021-123858\TransferCheck\target\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\example-ü-??.txt : SHA-256 primary streams matched while both files were held read-only
+RESULT copied=0, skipped=0, errors=0, matched=1, missing=0, mismatched=0, changed=0, unchecked=0, metadata differences=0
+PASS: copy, hash verification, resume, replacement backup, metadata, preflight, UNC formatting, temporary cleanup, comparison
+HARNESS TransferCheck EXIT 0
+---- SafetyCheck
+PASS: file/directory metadata agrees with System.IO; missing paths; concurrent destination change protected; junction blocked
+HARNESS SafetyCheck EXIT 0
+---- CheckpointCheck
+INFO 300k-row checkpoint: synchronous save 1396 ms; worker blocked 0 ms with background save
+PASS: checkpoint throttling, periodic save, forced save, reload, failed-save backoff and recovery, background save does not block the worker, concurrent results
+HARNESS CheckpointCheck EXIT 0
+
+RESULT: ALL TESTS PASSED
