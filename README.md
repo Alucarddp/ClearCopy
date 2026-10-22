@@ -1,11 +1,17 @@
 # ClearCopy
 
-Private backup of ClearCopy **0.3.9.1**, captured on 2026-10-21.
+Private source and executable backups.
 
-- `ClearCopy-0.3.9.1.exe` and `.exe.config`: existing release files, copied without rebuilding.
-- `ClearCopy-0.3.9.1-source/`: complete current source folder, including tests and existing documentation.
-- `BACKUP-SHA256.csv`: SHA-256 manifest for all 67 original files.
+## Current version: 0.4.2
 
-The source and executable were backed up exactly as found. Backup checks confirm byte equality; no application build or regression tests were run for this backup. Existing test reports are historical reports supplied with the source.
+Captured on 2026-10-22 from the current local Clearcopy folder.
 
-Older versions in Archive and the separate Tools folder are outside this version snapshot. No original files were modified.
+- `ClearCopy-0.4.2-source/`: source code, tests, supporting test executables and documentation.
+- `ClearCopy-0.4.2.exe` and `.exe.config`: existing release files, copied without rebuilding.
+- `BACKUP-SHA256-0.4.2.csv`: SHA-256 checksums for all 69 backed-up files.
+
+Generated build/test/diagnostic logs and `Tests/Reports`, the top-level `Reports`, `Tools` and local `Archive` folders are excluded. Original files were not modified. All included files were checked against the originals; uploaded Git object hashes were verified. Application tests were not rerun for this backup; supplied test reports describe earlier test runs.
+
+## Earlier backup
+
+The 0.3.9.1 source and executable remain in this repository. Its manifest is `BACKUP-SHA256.csv`.
